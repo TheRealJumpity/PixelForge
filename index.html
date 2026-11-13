@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PixelForge</title>
+<style>
+  :root{
+    --bg:#1e1e1e; --bg2:#252525; --bg3:#2d2d2d; --border:#3a3a3a;
+    --text:#e0e0e0; --dim:#9a9a9a; --accent:#4a90d9; --accent-h:#5aa0e9;
+    --accent2:#8a5bfa; --ok:#3ddc84; --warn:#ffb454;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;user-select:none;-webkit-user-select:none}
+  html,body{height:100%;overflow:hidden}
+  body{background:var(--bg);color:var(--text);font:13px/1.4 "Segoe UI",system-ui,sans-serif;display:flex;flex-direction:column}
+
+/* ---------- Start screen ---------- */
+  #startScreen{position:fixed;inset:0;z-index:600;display:flex;align-items:center;justify-content:center;
+    background:radial-gradient(700px 400px at 25% -5%, rgba(74,144,217,.18), transparent 60%),
+               radial-gradient(700px 400px at 85% 5%, rgba(138,91,250,.14), transparent 55%), var(--bg);}
+  #startScreen.hidden{display:none}
+  .startInner{text-align:center;max-width:640px;padding:20px}
+  .startLogo{font-size:44px;font-weight:800;letter-spacing:-1.5px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .startTag{color:var(--dim);margin:8px 0 34px;font-size:15px}
+  .startCards{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+  .startCard{flex:1;min-width:230px;max-width:280px;background:var(--bg2);border:1px solid var(--border);
+    border-radius:14px;padding:26px 20px;cursor:pointer;transition:border-color .2s, transform .1s}
+  .startCard:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .startCard svg{width:36px;height:36px;margin-bottom:12px}
+  .startCard h3{font-size:16px;margin-bottom:6px}
+  .startCard p{font-size:12px;color:var(--dim);line-height:1.5}
+  #blankOpts{margin:26px auto 0;max-width:420px;background:var(--bg2);border:1px solid var(--border);
+    border-radius:14px;padding:18px;text-align:left}
+  #blankOpts .brow{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  #blankOpts label{color:var(--dim);width:92px;font-size:12px}
+  #blankOpts input[type=number]{width:76px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:5px;padding:5px 7px;font:inherit}
+  #blankOpts select{flex:1;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:5px;padding:5px 7px;font:inherit}
+  #blankOpts input[type=color]{width:42px;height:28px;border:1px solid var(--border);border-radius:5px;background:var(--bg);padding:2px;cursor:pointer}
+  #createBtn{display:block;width:100%;margin-top:6px;padding:10px;border:0;border-radius:8px;
+    background:var(--accent);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+  #createBtn:hover{background:var(--accent-h)}
+  .hidden{display:none !important}
+
+/* ---------- Menu bar ---------- */
+  #menubar{display:flex;align-items:center;gap:2px;background:var(--bg2);border-bottom:1px solid var(--border);padding:4px 8px;flex-shrink:0;position:relative;z-index:100}
+  .logo{font-weight:700;font-size:14px;letter-spacing:.5px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-right:14px}
+  .menu{position:relative}
+  .menu>button{background:none;border:0;color:var(--text);font:inherit;padding:5px 10px;border-radius:4px;cursor:pointer}
+  .menu>button:hover,.menu.open>button{background:var(--bg3)}
+  .dropdown{display:none;position:absolute;top:100%;left:0;background:var(--bg3);border:1px solid var(--border);
+    border-radius:6px;min-width:220px;padding:4px 0;box-shadow:0 10px 30px rgba(0,0,0,.5);z-index:200}
+  .menu.open .dropdown{display:block}
+  .dropdown button{display:block;width:100%;text-align:left;background:none;border:0;color:var(--text);font:inherit;padding:7px 14px;cursor:pointer}
+  .dropdown button:hover{background:var(--accent)}
+  .dropdown hr{border:0;border-top:1px solid var(--border);margin:4px 0}
+  .dropdown .kbd{float:right;color:var(--dim)}
+  .dropdown button:hover .kbd{color:#fff}
+
+/* ---------- Options bar ---------- */
+  #optionsbar{display:flex;align-items:center;gap:16px;background:var(--bg2);border-bottom:1px solid var(--border);padding:6px 12px;min-height:40px;flex-shrink:0;flex-wrap:wrap}
+  .opt-group{display:none;align-items:center;gap:8px}
+  .opt-group.visible{display:flex}
+  .opt-group label{color:var(--dim);font-size:12px}
+  input[type=range]{accent-color:var(--accent);width:110px}
+  input[type=number],select{background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:4px;padding:3px 6px;font:inherit;width:60px}
+  select{width:auto}
+  .opt-group .val{color:var(--dim);min-width:34px;font-size:12px}
+  .obtn{background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--text);font:inherit;padding:4px 12px;cursor:pointer}
+  .obtn:hover{border-color:var(--accent);color:var(--accent-h)}
+
+/* ---------- Tool hint bar ---------- */
+  #toolHint{display:flex;align-items:center;gap:8px;background:var(--bg2);border-bottom:1px solid var(--border);
+    padding:5px 12px;font-size:12px;color:var(--dim);flex-shrink:0}
+  #toolHint b{color:var(--accent-h);text-transform:capitalize;font-weight:600}
+
+/* ---------- Layout ---------- */
+  #main{flex:1;display:flex;min-height:0}
+  #toolbar{width:44px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;padding:6px 0;gap:3px;flex-shrink:0;overflow-y:auto}
+  .tool{width:34px;height:34px;border:1px solid transparent;border-radius:6px;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--dim)}
+  .tool svg{width:18px;height:18px}
+  .tool:hover{background:var(--bg3);color:var(--text)}
+  .tool.active{background:var(--accent);color:#fff}
+  .tb-sep{width:26px;height:1px;background:var(--border);margin:4px 0;flex-shrink:0}
+
+#canvasarea{flex:1;overflow:auto;background:#181818;position:relative}
+  #canvaswrap{margin:20px;display:inline-block;position:relative;
+    background:repeating-conic-gradient(#2b2b2b 0% 25%, #383838 0% 50%) 0 0/20px 20px;
+    box-shadow:0 4px 30px rgba(0,0,0,.6)}
+  #view,#overlay{display:block;width:100%;height:100%}
+  #overlay{position:absolute;inset:0;cursor:crosshair;touch-action:none}
+  #overlay.pan{cursor:grab}
+
+#rightpanel{width:240px;background:var(--bg2);border-left:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto}
+  .section{border-bottom:1px solid var(--border);padding:10px}
+  .section h3{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--dim);margin-bottom:8px}
+
+/* Colors */
+  #swatches{position:relative;width:56px;height:56px;margin:4px 0 10px}
+  .swatch{position:absolute;width:34px;height:34px;border:2px solid #555;border-radius:4px;cursor:pointer;padding:0;background:none}
+  #swPrimary{top:0;left:0;z-index:2}
+  #swSecondary{bottom:0;right:0}
+  #swPrimary::-webkit-color-swatch-wrapper,#swSecondary::-webkit-color-swatch-wrapper{padding:0}
+  #swPrimary::-webkit-color-swatch,#swSecondary::-webkit-color-swatch{border:none;border-radius:2px}
+  #swapColors{position:absolute;top:18px;left:18px;z-index:3;width:20px;height:20px;border-radius:50%;
+    border:1px solid var(--border);background:var(--bg3);color:var(--dim);cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center}
+  #swapColors:hover{color:var(--accent-h)}
+  #hexRow{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+  #hexInput{flex:1;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:5px;padding:5px 8px;font:12px monospace;text-transform:uppercase}
+  #palette{display:grid;grid-template-columns:repeat(8,1fr);gap:4px;margin-bottom:10px}
+  .pal{width:100%;aspect-ratio:1;border:1px solid var(--border);border-radius:3px;cursor:pointer}
+  .pal:hover{border-color:#fff}
+  #recentTitle{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+  #recent{display:grid;grid-template-columns:repeat(8,1fr);gap:4px}
+  #colorNote{font-size:11px;color:var(--dim);margin-top:10px;line-height:1.6}
+
+/* Layers */
+  #blendRow,#opacityRow{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  #blendRow label,#opacityRow label{color:var(--dim);font-size:12px;width:52px}
+  #layerBlend{flex:1;width:auto}
+  #layerOpacity{flex:1;width:auto}
+  #layerList{display:flex;flex-direction:column;gap:2px;margin-top:6px}
+  .layer{display:flex;align-items:center;gap:6px;padding:5px 7px;border:1px solid transparent;border-radius:5px;cursor:pointer;background:var(--bg3)}
+  .layer:hover{border-color:var(--border)}
+  .layer.active{border-color:var(--accent)}
+  .layer .eye{background:none;border:0;color:var(--dim);cursor:pointer;font-size:12px;width:20px;flex-shrink:0;padding:2px 0}
+  .layer .eye.off{color:#444}
+  .layer .lname{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px}
+  .layer .lop{color:var(--dim);font-size:10px}
+  #layerBtns{display:flex;gap:4px;margin-top:8px}
+  #layerBtns button{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:4px;color:var(--dim);cursor:pointer;font:inherit;font-size:12px;padding:4px 2px}
+  #layerBtns button:hover{color:var(--accent-h);border-color:var(--accent)}
+
+/* ---------- Status bar ---------- */
+  #statusbar{display:flex;gap:20px;background:var(--bg2);border-top:1px solid var(--border);padding:4px 12px;font-size:11.5px;color:var(--dim);flex-shrink:0}
+  #statusbar span b{color:var(--text);font-weight:600}
+
+/* ---------- Modal ---------- */
+  #modalBack{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:500}
+  #modalBack.show{display:flex}
+  #modal{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 24px;min-width:340px;max-width:520px;box-shadow:0 20px 60px rgba(0,0,0,.6);max-height:80vh;overflow:auto}
+  #modal h2{font-size:15px;margin-bottom:14px}
+  #modal .mrow{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  #modal label{color:var(--dim);width:90px}
+  #modal input[type=number]{width:80px}
+  #modal input[type=range]{flex:1;width:auto}
+  #modal .mval{width:44px;text-align:right;color:var(--text)}
+  #modal .mbtns{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+  #modal .mbtns button{min-width:76px;padding:7px 16px;border-radius:6px;border:1px solid var(--border);background:var(--bg3);color:var(--text);cursor:pointer;font:inherit}
+  #modal .mbtns .primary{background:var(--accent);border-color:var(--accent)}
+  #modal .mbtns button:hover{filter:brightness(1.12)}
+  #helpBox{max-width:460px;line-height:1.9;font-size:12.5px}
+  #helpBox h4{margin:12px 0 4px;color:var(--accent-h)}
+  #helpBox td{padding:0 14px 0 0;color:var(--dim)}
+  #helpBox td:first-child{color:var(--text);white-space:nowrap}
+
+#textInput{position:absolute;display:none;background:transparent;border:1px dashed var(--accent);color:#fff;outline:none;font:inherit;z-index:50;min-width:60px}
+  #dropHint{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(74,144,217,.18);border:3px dashed var(--accent);z-index:400;font-size:22px;color:var(--accent-h);pointer-events:none}
+</style>
+</head>
+<body>
+
+<!-- ================= START SCREEN ================= -->
+<div id="startScreen">
+  <div class="startInner">
+    <div class="startLogo">PixelForge</div>
+    <div class="startTag">A layered image editor that runs entirely in your browser.</div>
+    <div class="startCards">
+      <div class="startCard" id="startUpload">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#4a90d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/>
+        </svg>
+        <h3>Open an image</h3>
+        <p>JPG, PNG, WebP or GIF. Your file never leaves this device — everything is processed locally.</p>
+      </div>
+      <div class="startCard" id="startBlank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#8a5bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 8v8M8 12h8"/>
+        </svg>
+        <h3>New blank canvas</h3>
+        <p>Start from scratch. Choose a size from presets or enter your own dimensions and a background color.</p>
+      </div>
+    </div>
+    <div id="blankOpts" class="hidden">
+      <div class="brow"><label>Preset</label>
+        <select id="presetSel">
+          <option value="custom">Custom size</option>
+          <option value="1080,1080">Square — 1080 × 1080</option>
+          <option value="1920,1080">HD landscape — 1920 × 1080</option>
+          <option value="1080,1920">Story / portrait — 1080 × 1920</option>
+          <option value="2560,1440">QHD — 2560 × 1440</option>
+          <option value="1280,800">Web — 1280 × 800</option>
+          <option value="800,1131">A4 @ 96dpi — 800 × 1131</option>
+        </select>
+      </div>
+      <div class="brow"><label>Width, height</label>
+        <input type="number" id="blankW" value="1280" min="1" max="8000"> ×
+        <input type="number" id="blankH" value="800" min="1" max="8000">
+      </div>
+      <div class="brow"><label>Background</label>
+        <select id="blankBg">
+          <option value="white">White</option>
+          <option value="transparent">Transparent</option>
+          <option value="custom">Custom color</option>
+        </select>
+        <input type="color" id="blankBgColor" value="#ffffff" title="Custom background color">
+      </div>
+      <button id="createBtn">Create canvas</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MENUBAR ================= -->
+<div id="menubar">
+  <span class="logo">PixelForge</span>
+  <div class="menu"><button>File</button>
+    <div class="dropdown">
+      <button data-action="new">New / open document<span class="kbd">Ctrl N</span></button>
+      <button data-action="open">Open image<span class="kbd">Ctrl O</span></button>
+      <hr>
+      <button data-action="exportPng">Export as PNG<span class="kbd">Ctrl S</span></button>
+      <button data-action="exportJpg">Export as JPEG</button>
+    </div>
+  </div>
+  <div class="menu"><button>Edit</button>
+    <div class="dropdown">
+      <button data-action="undo">Undo<span class="kbd">Ctrl Z</span></button>
+      <button data-action="redo">Redo<span class="kbd">Ctrl Y</span></button>
+      <hr>
+      <button data-action="clearLayer">Clear active layer</button>
+      <button data-action="fillLayer">Fill layer with primary color</button>
+    </div>
+  </div>
+  <div class="menu"><button>Image</button>
+    <div class="dropdown">
+      <button data-action="rotateCW">Rotate 90° clockwise</button>
+      <button data-action="rotateCCW">Rotate 90° counter-clockwise</button>
+      <button data-action="flipH">Flip horizontally</button>
+      <button data-action="flipV">Flip vertically</button>
+      <hr>
+      <button data-action="resizeDoc">Resize document</button>
+      <button data-action="applyCrop">Apply crop (crop tool)<span class="kbd">Enter</span></button>
+    </div>
+  </div>
+  <div class="menu"><button>Filters</button>
+    <div class="dropdown">
+      <button data-action="f-brightness">Brightness</button>
+      <button data-action="f-contrast">Contrast</button>
+      <button data-action="f-saturation">Saturation</button>
+      <button data-action="f-hue">Hue rotation</button>
+      <button data-action="f-blur">Gaussian blur</button>
+      <button data-action="f-sharpen">Sharpen</button>
+      <hr>
+      <button data-action="f-pixelate">Pixelate</button>
+      <button data-action="f-noise">Add noise</button>
+      <button data-action="f-vignette">Vignette</button>
+      <hr>
+      <button data-action="f-grayscale">Grayscale</button>
+      <button data-action="f-invert">Invert colors</button>
+      <button data-action="f-sepia">Sepia</button>
+    </div>
+  </div>
+  <div class="menu"><button>View</button>
+    <div class="dropdown">
+      <button data-action="zoomIn">Zoom in<span class="kbd">+</span></button>
+      <button data-action="zoomOut">Zoom out<span class="kbd">-</span></button>
+      <button data-action="zoomFit">Fit to screen<span class="kbd">0</span></button>
+      <button data-action="zoom100">Actual pixels<span class="kbd">1</span></button>
+    </div>
+  </div>
+  <div class="menu"><button>Help</button>
+    <div class="dropdown">
+      <button data-action="guide">Tool guide — what every tool does</button>
+      <button data-action="help">Keyboard shortcuts</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= OPTIONS BAR ================= -->
+<div id="optionsbar">
+  <div class="opt-group" data-tools="brush eraser spray smudge blur dodge burn">
+    <label>Size</label><input type="range" id="brushSize" min="1" max="200" value="20"><span class="val" id="brushSizeVal">20</span>
+    <label>Opacity</label><input type="range" id="brushOpacity" min="1" max="100" value="100"><span class="val" id="brushOpacityVal">100%</span>
+  </div>
+  <div class="opt-group" data-tools="line rect ellipse">
+    <label>Stroke</label><input type="range" id="strokeW" min="1" max="100" value="4"><span class="val" id="strokeWVal">4</span>
+    <label>Mode</label>
+    <select id="shapeMode">
+      <option value="stroke">Stroke (primary)</option>
+      <option value="fill">Fill (secondary)</option>
+      <option value="both">Stroke + fill</option>
+    </select>
+  </div>
+  <div class="opt-group" data-tools="fill">
+    <label>Tolerance</label><input type="range" id="tolerance" min="0" max="255" value="32"><span class="val" id="toleranceVal">32</span>
+  </div>
+  <div class="opt-group" data-tools="text">
+    <label>Size</label><input type="number" id="fontSize" value="48" min="8" max="400">
+    <select id="fontStyle"><option value="normal">Regular</option><option value="bold">Bold</option><option value="italic">Italic</option><option value="bold italic">Bold italic</option></select>
+    <select id="fontFamily">
+      <option>Arial</option><option>Helvetica</option><option>Georgia</option>
+      <option>Times New Roman</option><option>Courier New</option><option>Verdana</option>
+      <option>Trebuchet MS</option><option>Impact</option><option>Comic Sans MS</option>
+    </select>
+  </div>
+  <div class="opt-group" data-tools="crop">
+    <span style="color:var(--dim)">Drag a selection, then:</span>
+    <button class="obtn" data-action="applyCrop">Apply crop</button>
+  </div>
+</div>
+
+<!-- ================= TOOL HINT BAR ================= -->
+<div id="toolHint"><b id="hintTool">brush</b><span id="hintText">Loading…</span></div>
+
+<!-- ================= MAIN ================= -->
+<div id="main">
+  <div id="toolbar">
+    <button class="tool" data-tool="pan" title="Pan view (H)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+    </button>
+    <button class="tool" data-tool="zoom" title="Zoom (Z) — click in, shift-click out">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="7"/><path d="M21 21l-6-6"/><path d="M10 7v6M7 10h6"/></svg>
+    </button>
+    <button class="tool" data-tool="move" title="Move layer (V)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M12 2l-3 3M12 2l3 3M12 22l-3-3M12 22l3-3M2 12l3-3M2 12l3 3M22 12l-3-3M22 12l-3 3"/></svg>
+    </button>
+    <div class="tb-sep"></div>
+    <button class="tool active" data-tool="brush" title="Brush (B)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" 
