@@ -329,4 +329,1031 @@
     </button>
     <div class="tb-sep"></div>
     <button class="tool active" data-tool="brush" title="Brush (B)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg>
+    </button>
+    <button class="tool" data-tool="eraser" title="Eraser (E)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20H8L2.5 14.5a2 2 0 0 1 0-2.8l8.6-8.6a2 2 0 0 1 2.8 0l6 6a2 2 0 0 1 0 2.8L14 20"/><path d="M9.5 9.8l6.3 6.3"/></svg>
+    </button>
+    <button class="tool" data-tool="spray" title="Spray / airbrush (A)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="13" r="6"/><path d="M12 4.5v-1.5"/><path d="M17.5 8l1.5-1.5"/><path d="M6.5 8L5 6.5"/><circle cx="5.5" cy="17.5" r=".4" fill="currentColor"/><circle cx="18.5" cy="17.5" r=".4" fill="currentColor"/><circle cx="12" cy="20.5" r=".4" fill="currentColor"/></svg>
+    </button>
+    <button class="tool" data-tool="smudge" title="Smudge (M)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7s6.5 7 6.5 11.8a6.5 6.5 0 0 1-13 0C5.5 9.7 12 2.7 12 2.7z"/></svg>
+    </button>
+    <button class="tool" data-tool="blur" title="Blur brush (U)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9" stroke-dasharray="3 4"/><path d="M8 12h8" stroke-dasharray="2 3"/></svg>
+    </button>
+    <button class="tool" data-tool="dodge" title="Dodge — lighten (D)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg>
+    </button>
+    <button class="tool" data-tool="burn" title="Burn — darken (N)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.4 0 7-2.8 7-6.5 0-4.5-7-13.5-7-13.5S5 11 5 15.5C5 19.2 7.6 22 12 22z"/><path d="M12 18c1.7 0 2.6-1 2.6-2.4 0-1.8-2.6-5-2.6-5s-2.6 3.2-2.6 5c0 1.4.9 2.4 2.6 2.4z"/></svg>
+    </button>
+    <div class="tb-sep"></div>
+    <button class="tool" data-tool="fill" title="Flood fill (F)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 11l-8-8-8.6 8.6a2 2 0 0 0 0 2.8l5.2 5.2c.8.8 2 .8 2.8 0L19 11z"/><path d="M5 2l5 5"/><path d="M22 16s2 2.3 2 4a2 2 0 0 1-4 0c0-1.7 2-4 2-4z"/></svg>
+    </button>
+    <button class="tool" data-tool="gradient" title="Gradient (G)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 21L21 3"/></svg>
+    </button>
+    <button class="tool" data-tool="eyedropper" title="Eyedropper (I)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22l1-6L15.5 3.5a2.1 2.1 0 0 1 3 0l2 2a2.1 2.1 0 0 1 0 3L8 21l-6 1z"/><path d="M14.5 4.5l5 5"/></svg>
+    </button>
+    <div class="tb-sep"></div>
+    <button class="tool" data-tool="text" title="Text (T)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+    </button>
+    <button class="tool" data-tool="line" title="Line (L)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 19L19 5"/></svg>
+    </button>
+    <button class="tool" data-tool="rect" title="Rectangle (R)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/></svg>
+    </button>
+    <button class="tool" data-tool="ellipse" title="Ellipse (O)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="9" ry="7"/></svg>
+    </button>
+    <div class="tb-sep"></div>
+    <button class="tool" data-tool="crop" title="Crop (C)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2v14a2 2 0 0 0 2 2h14"/><path d="M18 22V8a2 2 0 0 0-2-2H2"/></svg>
+    </button>
+  </div>
+
+<div id="canvasarea">
+    <div id="canvaswrap">
+      <canvas id="view"></canvas>
+      <canvas id="overlay"></canvas>
+    </div>
+  </div>
+
+<div id="rightpanel">
+    <div class="section">
+      <h3>Color</h3>
+      <div id="swatches">
+        <input type="color" class="swatch" id="swPrimary" title="Primary color" value="#000000">
+        <input type="color" class="swatch" id="swSecondary" title="Secondary color (shift-click palette entries to set this)" value="#ffffff">
+        <button id="swapColors" title="Swap colors (X)">⇄</button>
+      </div>
+      <div id="hexRow">
+        <span style="color:var(--dim);font-size:12px">Hex</span>
+        <input id="hexInput" maxlength="7" spellcheck="false" value="#000000">
+      </div>
+      <div id="palette"></div>
+      <div id="recentTitle">Recent</div>
+      <div id="recent"></div>
+      <p id="colorNote">Click a swatch to set the primary color. Shift-click (or right-click) to set the secondary color. The eyedropper and hex box feed into Recent automatically.</p>
+    </div>
+
+<div class="section">
+      <h3>Layers</h3>
+      <div id="blendRow"><label>Blend</label>
+        <select id="layerBlend">
+          <option value="normal">Normal</option><option value="multiply">Multiply</option>
+          <option value="screen">Screen</option><option value="overlay">Overlay</option>
+          <option value="darken">Darken</option><option value="lighten">Lighten</option>
+          <option value="color-dodge">Color dodge</option><option value="color-burn">Color burn</option>
+          <option value="hard-light">Hard light</option><option value="soft-light">Soft light</option>
+          <option value="difference">Difference</option><option value="exclusion">Exclusion</option>
+          <option value="hue">Hue</option><option value="saturation">Saturation</option>
+          <option value="color">Color</option><option value="luminosity">Luminosity</option>
+        </select>
+      </div>
+      <div id="opacityRow"><label>Opacity</label>
+        <input type="range" id="layerOpacity" min="0" max="100" value="100">
+        <span class="val" id="layerOpacityVal">100%</span>
+      </div>
+      <div id="layerList"></div>
+      <div id="layerBtns">
+        <button data-lbtn="add" title="New layer">+ New</button>
+        <button data-lbtn="dup" title="Duplicate layer">Dup</button>
+        <button data-lbtn="up" title="Move up">↑</button>
+        <button data-lbtn="down" title="Move down">↓</button>
+        <button data-lbtn="del" title="Delete layer">Del</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= STATUS BAR ================= -->
+<div id="statusbar">
+  <span>Zoom <b id="stZoom">100%</b></span>
+  <span>Doc <b id="stDoc">—</b></span>
+  <span>Pos <b id="stPos">—</b></span>
+  <span>Tool <b id="stTool">brush</b></span>
+</div>
+
+<!-- ================= MODAL ================= -->
+<div id="modalBack">
+  <div id="modal">
+    <h2 id="modalTitle">Title</h2>
+    <div id="modalBody"></div>
+    <div class="mbtns">
+      <button id="modalCancel">Cancel</button>
+      <button id="modalOk" class="primary">Apply</button>
+    </div>
+  </div>
+</div>
+
+<div id="dropHint">Drop image to open</div>
+<input type="file" id="fileInput" accept="image/*" hidden>
+
+<script>
+/* ============================================================
+   PixelForge — single-file layered image editor
+   ============================================================ */
+
+const view    = document.getElementById('view');
+const overlay = document.getElementById('overlay');
+const wrap    = document.getElementById('canvaswrap');
+const area    = document.getElementById('canvasarea');
+const vctx    = view.getContext('2d');
+const octx    = overlay.getContext('2d');
+
+const doc   = { w: 1280, h: 800 };
+let layers  = [];
+let active  = 0;
+let zoom    = 1;
+let tool    = 'brush';
+let primary = '#000000', secondary = '#ffffff';
+let layerSeq = 1;
+
+const $  = id => document.getElementById(id);
+const ACTIVE = () => layers[active];
+
+/* ---------------- Tool instructions ---------------- */
+const TOOLTIPS = {
+  pan:       'Drag anywhere to move your view of the canvas. Shortcut: hold Space with any tool.',
+  zoom:      'Click to zoom in. Shift-click or right-click to zoom out. Ctrl + mouse wheel also zooms.',
+  move:      'Drag to move every pixel on the active layer. Works best on its own layer.',
+  brush:     'Paint with the primary color. Set size and opacity in the bar above; [ and ] adjust size.',
+  eraser:    'Erase pixels on the active layer to transparency. Size and opacity work like the brush.',
+  spray:     'Airbrush: hold and drag to spray a soft cloud of primary-color dots. Lower opacity for lighter mist.',
+  smudge:    'Drag to smear and blend the pixels already on the layer, like dragging a finger through wet paint.',
+  blur:      'Brush over an area to soften and blur it. The bigger the brush, the wider the effect.',
+  dodge:     'Brush over an area to gradually lighten it, like exposing photo paper longer.',
+  burn:      'Brush over an area to gradually darken it. Use a low opacity and build up slowly.',
+  fill:      'Click a region to flood-fill it with the primary color. Tolerance controls how similar colors must be.',
+  gradient:  'Drag from point A to point B to fill the layer with a gradient from primary to secondary color.',
+  eyedropper:'Click any pixel to make its color your primary color. The color is saved to Recent.',
+  text:      'Click on the canvas, type your text, then press Enter to commit it. Esc cancels.',
+  line:      'Drag to draw a straight line. Stroke uses the primary color.',
+  rect:      'Drag to draw a rectangle. Choose stroke, fill, or both above.',
+  ellipse:   'Drag to draw an ellipse. Choose stroke, fill, or both above.',
+  crop:      'Drag over the area you want to keep, then press Enter or click Apply crop.'
+};
+
+/* ---------------- Layer model ---------------- */
+function makeLayer(name){
+  const c = document.createElement('canvas');
+  c.width = doc.w; c.height = doc.h;
+  return { name, canvas:c, ctx:c.getContext('2d'), visible:true, opacity:1, blend:'normal' };
+}
+function addLayer(name){
+  const l = makeLayer(name || ('Layer ' + layerSeq++));
+  layers.splice(active, 0, l);
+  active = 0;
+  render(); renderLayers();
+  return l;
+}
+function delLayer(i){
+  if(layers.length <= 1) return;
+  layers.splice(i,1);
+  if(active >= layers.length) active = layers.length - 1;
+  render(); renderLayers();
+}
+function dupLayer(i){
+  const src = layers[i];
+  const l = makeLayer(src.name + ' copy');
+  l.ctx.drawImage(src.canvas, 0, 0);
+  l.opacity = src.opacity; l.blend = src.blend; l.visible = src.visible;
+  layers.splice(i, 0, l); active = i;
+  render(); renderLayers();
+}
+
+/* ---------------- Render ---------------- */
+function render(){
+  vctx.clearRect(0,0,doc.w,doc.h);
+  for(let i = layers.length - 1; i >= 0; i--){
+    const l = layers[i];
+    if(!l.visible) continue;
+    vctx.globalAlpha = l.opacity;
+    vctx.globalCompositeOperation = l.blend === 'normal' ? 'source-over' : l.blend;
+    vctx.drawImage(l.canvas, 0, 0);
+  }
+  vctx.globalAlpha = 1;
+  vctx.globalCompositeOperation = 'source-over';
+}
+function sizeCanvases(){
+  view.width = doc.w; view.height = doc.h;
+  overlay.width = doc.w; overlay.height = doc.h;
+  wrap.style.width  = (doc.w * zoom) + 'px';
+  wrap.style.height = (doc.h * zoom) + 'px';
+  $('stDoc').textContent = doc.w + ' × ' + doc.h;
+  $('stZoom').textContent = Math.round(zoom*100) + '%';
+}
+
+/* ---------------- History ---------------- */
+const MAXH = 24;
+let hist = [], hi = -1;
+function snapshot(){
+  const snapLayers = layers.map(l => {
+    const c = document.createElement('canvas');
+    c.width = l.canvas.width; c.height = l.canvas.height;
+    c.getContext('2d').drawImage(l.canvas, 0, 0);
+    return { name:l.name, visible:l.visible, opacity:l.opacity, blend:l.blend, canvas:c };
+  });
+  hist = hist.slice(0, hi + 1);
+  hist.push({ w:doc.w, h:doc.h, active, layers:snapLayers });
+  if(hist.length > MAXH) hist.shift();
+  hi = hist.length - 1;
+}
+function restore(){
+  if(hi < 0 || hi >= hist.length) return;
+  const s = hist[hi];
+  doc.w = s.w; doc.h = s.h;
+  active = Math.min(s.active, s.layers.length - 1);
+  layers = s.layers.map(sl => {
+    const c = document.createElement('canvas');
+    c.width = sl.canvas.width; c.height = sl.canvas.height;
+    c.getContext('2d').drawImage(sl.canvas, 0, 0);
+    return { name:sl.name, visible:sl.visible, opacity:sl.opacity, blend:sl.blend, canvas:c, ctx:c.getContext('2d') };
+  });
+  sizeCanvases(); render(); renderLayers();
+}
+function undo(){ if(hi > 0){ hi--; restore(); } }
+function redo(){ if(hi < hist.length - 1){ hi++; restore(); } }
+
+/* ---------------- Layers panel ---------------- */
+function renderLayers(){
+  const list = $('layerList');
+  list.innerHTML = '';
+  layers.forEach((l, i) => {
+    const row = document.createElement('div');
+    row.className = 'layer' + (i === active ? ' active' : '');
+    const eye = document.createElement('button');
+    eye.className = 'eye' + (l.visible ? '' : ' off');
+    eye.textContent = l.visible ? '●' : '○';
+    eye.title = 'Toggle visibility';
+    eye.onclick = e => { e.stopPropagation(); l.visible = !l.visible; render(); renderLayers(); };
+    const nm = document.createElement('span');
+    nm.className = 'lname';
+    nm.textContent = l.name;
+    nm.title = 'Double-click to rename';
+    nm.ondblclick = e => {
+      e.stopPropagation();
+      const v = prompt('Layer name:', l.name);
+      if(v){ l.name = v; renderLayers(); }
+    };
+    const op = document.createElement('span');
+    op.className = 'lop';
+    op.textContent = Math.round(l.opacity*100) + '%';
+    row.append(eye, nm, op);
+    row.onclick = () => { active = i; renderLayers(); syncLayerControls(); };
+    list.appendChild(row);
+  });
+  const l = ACTIVE();
+  if(l){ $('layerBlend').value = l.blend; $('layerOpacity').value = Math.round(l.opacity*100); $('layerOpacityVal').textContent = Math.round(l.opacity*100) + '%'; }
+}
+function syncLayerControls(){
+  const l = ACTIVE(); if(!l) return;
+  l.blend = $('layerBlend').value;
+  l.opacity = $('layerOpacity').value / 100;
+  $('layerOpacityVal').textContent = $('layerOpacity').value + '%';
+  render(); renderLayers();
+}
+$('layerBlend').addEventListener('change', () => { snapshot(); syncLayerControls(); });
+$('layerOpacity').addEventListener('input', syncLayerControls);
+$('layerOpacity').addEventListener('change', () => snapshot());
+
+$('layerBtns').addEventListener('click', e => {
+  const b = e.target.closest('[data-lbtn]'); if(!b) return;
+  snapshot();
+  const a = b.dataset.lbtn;
+  if(a === 'add') addLayer();
+  if(a === 'dup') dupLayer(active);
+  if(a === 'del') delLayer(active);
+  if(a === 'up' && active > 0){ [layers[active-1], layers[active]] = [layers[active], layers[active-1]]; active--; renderLayers(); }
+  if(a === 'down' && active < layers.length-1){ [layers[active+1], layers[active]] = [layers[active], layers[active+1]]; active++; renderLayers(); }
+});
+
+/* ---------------- Colors ---------------- */
+let recentColors = [];
+const PALETTE = [
+  '#000000','#404040','#808080','#bfbfbf','#ffffff','#7f7fff','#ff7f7f','#7fffbf',
+  '#ff0000','#8b0000','#ff6600','#ff9900','#ffcc00','#ffff00','#cccc00','#669900',
+  '#33cc33','#009933','#00cc99','#00ffff','#009999','#0066cc','#0033cc','#0000ff',
+  '#3300cc','#6600cc','#9900cc','#cc00cc','#ff0099','#ff0066','#cc3366','#996633',
+  '#663300','#c0c0e0','#e0c0c0','#c0e0c0'
+];
+function buildPalette(){
+  const pal = $('palette');
+  pal.innerHTML = '';
+  PALETTE.forEach(hex => {
+    const b = document.createElement('button');
+    b.className = 'pal';
+    b.style.background = hex;
+    b.title = hex + ' — click: primary, shift/right-click: secondary';
+    b.addEventListener('click', e => {
+      if(e.shiftKey) setSecondary(hex); else setPrimary(hex);
+    });
+    b.addEventListener('contextmenu', e => { e.preventDefault(); setSecondary(hex); });
+    pal.appendChild(b);
+  });
+}
+function renderRecent(){
+  const rec = $('recent');
+  rec.innerHTML = '';
+  recentColors.slice(0,8).forEach(hex => {
+    const b = document.createElement('button');
+    b.className = 'pal';
+    b.style.background = hex;
+    b.title = hex;
+    b.addEventListener('click', e => { if(e.shiftKey) setSecondary(hex); else setPrimary(hex); });
+    b.addEventListener('contextmenu', e => { e.preventDefault(); setSecondary(hex); });
+    rec.appendChild(b);
+  });
+}
+function pushRecent(hex){
+  recentColors = recentColors.filter(c => c.toLowerCase() !== hex.toLowerCase());
+  recentColors.unshift(hex);
+  renderRecent();
+}
+function setPrimary(hex){
+  primary = hex;
+  $('swPrimary').value = hex;
+  $('hexInput').value = hex;
+  pushRecent(hex);
+}
+function setSecondary(hex){
+  secondary = hex;
+  $('swSecondary').value = hex;
+}
+$('swPrimary').addEventListener('input', e => setPrimary(e.target.value));
+$('swSecondary').addEventListener('input', e => setSecondary(e.target.value));
+$('hexInput').addEventListener('keydown', e => {
+  if(e.key === 'Enter'){
+    let v = e.target.value.trim();
+    if(!v.startsWith('#')) v = '#' + v;
+    if(/^#[0-9a-fA-F]{6}$/.test(v)) setPrimary(v);
+    else e.target.value = primary;
+  }
+});
+$('swapColors').addEventListener('click', () => {
+  const t = primary;
+  setPrimary(secondary); setSecondary(t);
+});
+
+/* ---------------- Tools ---------------- */
+function setTool(t){
+  tool = t;
+  document.querySelectorAll('.tool').forEach(b => b.classList.toggle('active', b.dataset.tool === t));
+  document.querySelectorAll('.opt-group').forEach(g =>
+    g.classList.toggle('visible', g.dataset.tools.split(' ').includes(t)));
+  overlay.className = (t === 'pan') ? 'pan' : '';
+  $('stTool').textContent = t;
+  $('hintTool').textContent = t;
+  $('hintText').textContent = TOOLTIPS[t] || '';
+  octx.clearRect(0,0,doc.w,doc.h);
+  if(t !== 'text' && textInput) commitText();
+}
+document.querySelectorAll('.tool').forEach(b => b.addEventListener('click', () => setTool(b.dataset.tool)));
+
+const bindRange = (id, cb) => {
+  const el = $(id), out = $(id + 'Val');
+  el.addEventListener('input', () => { out.textContent = el.value + (id==='brushOpacity' ? '%' : ''); cb(+el.value); });
+};
+bindRange('brushSize',    v => {});
+bindRange('brushOpacity', v => {});
+bindRange('strokeW',       v => {});
+bindRange('tolerance',     v => {});
+
+/* ---------------- Pointer input ---------------- */
+const BRUSH_TOOLS = ['brush','eraser','spray','smudge','blur','dodge','burn'];
+let drawing = false, startP = null, lastP = null, panMode = false, panStart = null;
+let cropRect = null, moveTemp = null, moveOff = null;
+
+function pos(e){
+  const r = overlay.getBoundingClientRect();
+  return { x:(e.clientX - r.left) * (doc.w / r.width), y:(e.clientY - r.top) * (doc.h / r.height) };
+}
+overlay.addEventListener('contextmenu', e => e.preventDefault());
+
+overlay.addEventListener('pointerdown', e => {
+  overlay.setPointerCapture(e.pointerId);
+  const p = pos(e);
+
+if(e.button === 1 || spaceDown || tool === 'pan'){
+    panMode = true; panStart = { x:e.clientX, y:e.clientY, sl:area.scrollLeft, st:area.scrollTop };
+    return;
+  }
+  if(tool === 'zoom'){
+    setZoom(zoom * ((e.button === 2 || e.shiftKey) ? 0.8 : 1.25));
+    return;
+  }
+  if(e.button !== 0) return;
+  startP = lastP = p;
+
+if(BRUSH_TOOLS.includes(tool)){
+    snapshot();
+    drawing = true;
+    applyBrush(p, p);
+  } else if(tool === 'fill'){
+    snapshot(); floodFill(Math.floor(p.x), Math.floor(p.y));
+  } else if(tool === 'eyedropper'){
+    const d = vctx.getImageData(Math.floor(p.x), Math.floor(p.y), 1, 1).data;
+    setPrimary('#' + [d[0],d[1],d[2]].map(v => v.toString(16).padStart(2,'0')).join(''));
+  } else if(tool === 'text'){
+    beginTextInput(p);
+  } else if(tool === 'move'){
+    snapshot();
+    const l = ACTIVE();
+    moveTemp = document.createElement('canvas');
+    moveTemp.width = l.canvas.width; moveTemp.height = l.canvas.height;
+    moveTemp.getContext('2d').drawImage(l.canvas, 0, 0);
+    moveOff = { x:0, y:0 };
+    drawing = true;
+  } else if(['line','rect','ellipse','gradient','crop'].includes(tool)){
+    drawing = true;
+  }
+});
+
+overlay.addEventListener('pointermove', e => {
+  const p = pos(e);
+  $('stPos').textContent = Math.floor(p.x) + ', ' + Math.floor(p.y);
+  if(panMode){
+    area.scrollLeft = panStart.sl - (e.clientX - panStart.x);
+    area.scrollTop  = panStart.st - (e.clientY - panStart.y);
+    return;
+  }
+  if(!drawing) return;
+
+if(BRUSH_TOOLS.includes(tool)){ applyBrush(lastP, p); lastP = p; }
+  else if(tool === 'move'){
+    moveOff.x += p.x - lastP.x; moveOff.y += p.y - lastP.y; lastP = p;
+    const l = ACTIVE();
+    l.ctx.clearRect(0,0,doc.w,doc.h);
+    l.ctx.drawImage(moveTemp, moveOff.x, moveOff.y);
+    render();
+  }
+  else if(tool === 'line'){ previewShape(c => { c.moveTo(startP.x,startP.y); c.lineTo(p.x,p.y); }); }
+  else if(tool === 'rect'){ const r = normRect(startP,p); previewShape(c => c.rect(r.x,r.y,r.w,r.h)); }
+  else if(tool === 'ellipse'){ const r = normRect(startP,p); previewShape(c => c.ellipse(r.x+r.w/2, r.y+r.h/2, r.w/2, r.h/2, 0, 0, Math.PI*2)); }
+  else if(tool === 'gradient'){ octx.clearRect(0,0,doc.w,doc.h); octx.strokeStyle = 'rgba(120,170,255,.9)'; octx.lineWidth = 1/zoom; octx.beginPath(); octx.moveTo(startP.x,startP.y); octx.lineTo(p.x,p.y); octx.stroke(); }
+  else if(tool === 'crop'){ octx.clearRect(0,0,doc.w,doc.h); const r = normRect(startP,p); cropRect = r; octx.fillStyle = 'rgba(0,0,0,.55)'; octx.fillRect(0,0,doc.w,doc.h); octx.clearRect(r.x,r.y,r.w,r.h); octx.strokeStyle = '#4a90d9'; octx.lineWidth = 1/zoom; octx.strokeRect(r.x,r.y,r.w,r.h); }
+});
+
+overlay.addEventListener('pointerup', e => {
+  if(panMode){ panMode = false; return; }
+  if(!drawing) return;
+  drawing = false;
+  const p = pos(e);
+  octx.clearRect(0,0,doc.w,doc.h);
+
+if(['line','rect','ellipse'].includes(tool)){
+    snapshot();
+    drawShapeTo(ACTIVE().ctx, startP, p, $('shapeMode').value, +$('strokeW').value);
+    render();
+  } else if(tool === 'gradient'){
+    snapshot();
+    const l = ACTIVE();
+    const g = l.ctx.createLinearGradient(startP.x, startP.y, p.x, p.y);
+    g.addColorStop(0, primary); g.addColorStop(1, secondary);
+    l.ctx.fillStyle = g;
+    l.ctx.fillRect(0, 0, doc.w, doc.h);
+    render();
+  }
+  startP = lastP = null;
+});
+
+/* ---------------- Brush engine ---------------- */
+function applyAlong(a, b, fn){
+  const dist = Math.hypot(b.x - a.x, b.y - a.y);
+  const step = Math.max(2, +$('brushSize').value / 4);
+  if(dist === 0){ fn(a); return; }
+  for(let t = 0; t <= dist; t += step){
+    fn({ x:a.x + (b.x - a.x) * t / dist, y:a.y + (b.y - a.y) * t / dist });
+  }
+}
+function applyBrush(a, b){
+  if(tool === 'brush' || tool === 'eraser'){
+    const ctx = ACTIVE().ctx;
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.lineWidth = +$('brushSize').value;
+    ctx.globalAlpha = +$('brushOpacity').value / 100;
+    ctx.strokeStyle = ctx.fillStyle = primary;
+    ctx.globalCompositeOperation = tool === 'eraser' ? 'destination-out' : 'source-over';
+    ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+    ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+  }
+  else if(tool === 'spray'){ applyAlong(a, b, sprayDot); }
+  else if(tool === 'blur'){ applyAlong(a, b, blurDot); }
+  else if(tool === 'dodge'){ applyAlong(a, b, p => dodgeBurnDot(p, 'dodge')); }
+  else if(tool === 'burn'){ applyAlong(a, b, p => dodgeBurnDot(p, 'burn')); }
+  else if(tool === 'smudge'){ smudgeStep(a, b); }
+  render();
+}
+function sprayDot(p){
+  const ctx = ACTIVE().ctx;
+  const size = +$('brushSize').value;
+  const op = (+$('brushOpacity').value / 100) * 0.18;
+  ctx.fillStyle = primary;
+  ctx.globalAlpha = op;
+  const n = Math.max(4, size / 2);
+  for(let i = 0; i < n; i++){
+    const a = Math.random() * Math.PI * 2;
+    const r = Math.random() * size / 2;
+    ctx.fillRect(p.x + Math.cos(a) * r, p.y + Math.sin(a) * r, 1.4, 1.4);
+  }
+  ctx.globalAlpha = 1;
+}
+function blurDot(p){
+  const l = ACTIVE();
+  const size = Math.max(4, +$('brushSize').value);
+  const r = size / 2;
+  const tmp = document.createElement('canvas');
+  tmp.width = size; tmp.height = size;
+  tmp.getContext('2d').drawImage(l.canvas, p.x - r, p.y - r, size, size, 0, 0, size, size);
+  l.ctx.save();
+  l.ctx.beginPath(); l.ctx.arc(p.x, p.y, r, 0, Math.PI * 2); l.ctx.clip();
+  l.ctx.filter = 'blur(3px)';
+  l.ctx.drawImage(tmp, p.x - r, p.y - r);
+  l.ctx.filter = 'none';
+  l.ctx.restore();
+}
+function dodgeBurnDot(p, mode){
+  const ctx = ACTIVE().ctx;
+  const size = +$('brushSize').value;
+  const r = size / 2;
+  const strength = (+$('brushOpacity').value / 100) * 0.25;
+  const g = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r);
+  if(mode === 'dodge'){
+    g.addColorStop(0, 'rgb(255,255,255)'); g.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.globalCompositeOperation = 'lighten';
+  } else {
+    g.addColorStop(0, 'rgb(25,25,25)'); g.addColorStop(1, 'rgba(25,25,25,0)');
+    ctx.globalCompositeOperation = 'darken';
+  }
+  ctx.globalAlpha = strength;
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, Math.PI * 2); ctx.fill();
+  ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+}
+function smudgeStep(a, b){
+  const dx = b.x - a.x, dy = b.y - a.y;
+  if(!dx && !dy) return;
+  const l = ACTIVE();
+  const size = Math.max(8, +$('brushSize').value);
+  const r = size / 2;
+  const tmp = document.createElement('canvas');
+  tmp.width = size; tmp.height = size;
+  tmp.getContext('2d').drawImage(l.canvas, a.x - r, a.y - r, size, size, 0, 0, size, size);
+  l.ctx.globalAlpha = (+$('brushOpacity').value / 100) * 0.55;
+  l.ctx.drawImage(tmp, b.x - r, b.y - r);
+  l.ctx.globalAlpha = 1;
+}
+
+/* ---------------- Shape preview / commit ---------------- */
+function previewShape(pathFn){
+  octx.clearRect(0,0,doc.w,doc.h);
+  const mode = $('shapeMode').value;
+  octx.lineWidth = +$('strokeW').value; octx.lineCap = 'round';
+  octx.strokeStyle = primary; octx.fillStyle = secondary;
+  octx.beginPath(); pathFn(octx);
+  if(mode === 'fill' || mode === 'both') octx.fill();
+  if(mode === 'stroke' || mode === 'both') octx.stroke();
+}
+function drawShapeTo(ctx, a, b, mode, sw){
+  ctx.lineWidth = sw; ctx.lineCap = 'round';
+  ctx.strokeStyle = primary; ctx.fillStyle = secondary;
+  ctx.beginPath();
+  if(tool === 'line'){ ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); }
+  else if(tool === 'rect'){ const r = normRect(a,b); ctx.rect(r.x,r.y,r.w,r.h); }
+  else { const r = normRect(a,b); ctx.ellipse(r.x+r.w/2, r.y+r.h/2, Math.abs(r.w/2), Math.abs(r.h/2), 0, 0, Math.PI*2); }
+  if(mode === 'fill' || mode === 'both') ctx.fill();
+  if(mode === 'stroke' || mode === 'both') ctx.stroke();
+}
+function normRect(a,b){
+  return { x:Math.min(a.x,b.x), y:Math.min(a.y,b.y), w:Math.abs(b.x-a.x), h:Math.abs(b.y-a.y) };
+}
+
+/* ---------------- Flood fill ---------------- */
+function floodFill(x, y){
+  if(x<0||y<0||x>=doc.w||y>=doc.h) return;
+  const l = ACTIVE();
+  const img = l.ctx.getImageData(0,0,doc.w,doc.h);
+  const d = img.data;
+  const idx = (x,y) => (y*doc.w + x) * 4;
+  const t = +$('tolerance').value;
+  const si = idx(x,y);
+  const sc = [d[si],d[si+1],d[si+2],d[si+3]];
+  const tc = hexToRGBA(primary);
+  const match = i => Math.abs(d[i]-sc[0])<=t && Math.abs(d[i+1]-sc[1])<=t && Math.abs(d[i+2]-sc[2])<=t && Math.abs(d[i+3]-sc[3])<=t;
+  if(sc[0]===tc[0] && sc[1]===tc[1] && sc[2]===tc[2] && sc[3]===255) return;
+  const stack = [[x,y]];
+  while(stack.length){
+    const [cx, cy] = stack.pop();
+    if(cx<0||cy<0||cx>=doc.w||cy>=doc.h) continue;
+    const i = idx(cx,cy);
+    if(!match(i)) continue;
+    d[i]=tc[0]; d[i+1]=tc[1]; d[i+2]=tc[2]; d[i+3]=255;
+    stack.push([cx+1,cy],[cx-1,cy],[cx,cy+1],[cx,cy-1]);
+  }
+  l.ctx.putImageData(img, 0, 0);
+  render();
+}
+function hexToRGBA(h){
+  h = h.replace('#','');
+  return [parseInt(h.substr(0,2),16), parseInt(h.substr(2,2),16), parseInt(h.substr(4,2),16), 255];
+}
+
+/* ---------------- Text tool ---------------- */
+let textInput = null, textPos = null;
+function beginTextInput(p){
+  if(textInput) commitText();
+  textPos = p;
+  textInput = document.createElement('input');
+  textInput.id = 'textInput';
+  const fs = $('fontSize').value;
+  textInput.style.left = (p.x * zoom + wrap.offsetLeft) + 'px';
+  textInput.style.top  = (p.y * zoom + wrap.offsetTop) + 'px';
+  textInput.style.fontSize = (fs * zoom) + 'px';
+  textInput.placeholder = 'Type, press Enter';
+  document.body.appendChild(textInput);
+  textInput.focus();
+  textInput.addEventListener('keydown', ev => {
+    if(ev.key === 'Enter') commitText();
+    if(ev.key === 'Escape'){ textInput.remove(); textInput = null; }
+  });
+  textInput.addEventListener('blur', () => { if(textInput) commitText(); });
+}
+function commitText(){
+  if(!textInput) return;
+  const val = textInput.value;
+  textInput.remove(); textInput = null;
+  if(!val.trim()) return;
+  snapshot();
+  const ctx = ACTIVE().ctx;
+  ctx.fillStyle = primary;
+  const st = $('fontStyle').value;
+  ctx.font = (st.includes('italic') ? 'italic ' : '') +
+             (st.includes('bold') ? 'bold ' : '') +
+             $('fontSize').value + 'px ' + $('fontFamily').value;
+  ctx.textBaseline = 'alphabetic';
+  ctx.fillText(val, textPos.x, textPos.y);
+  render();
+}
+
+/* ---------------- Zoom / pan ---------------- */
+function setZoom(z){
+  zoom = Math.min(8, Math.max(0.05, z));
+  sizeCanvases();
+}
+area.addEventListener('wheel', e => {
+  if(e.ctrlKey){ e.preventDefault(); setZoom(zoom * (e.deltaY < 0 ? 1.12 : 0.89)); }
+}, { passive:false });
+
+let spaceDown = false;
+window.addEventListener('keydown', e => {
+  if(e.code === 'Space' && !/input|select/i.test(document.activeElement.tagName)){ spaceDown = true; overlay.classList.add('pan'); }
+});
+window.addEventListener('keyup', e => {
+  if(e.code === 'Space'){ spaceDown = false; if(tool !== 'pan') overlay.classList.remove('pan'); }
+});
+
+/* ---------------- Crop / transforms ---------------- */
+function applyCrop(){
+  if(!cropRect || cropRect.w < 2 || cropRect.h < 2) return;
+  snapshot();
+  const r = cropRect;
+  layers.forEach(l => {
+    const c = document.createElement('canvas');
+    c.width = Math.floor(r.w); c.height = Math.floor(r.h);
+    c.getContext('2d').drawImage(l.canvas, -r.x, -r.y);
+    l.canvas = c; l.ctx = c.getContext('2d');
+  });
+  doc.w = Math.floor(r.w); doc.h = Math.floor(r.h);
+  cropRect = null;
+  octx.clearRect(0,0,doc.w,doc.h);
+  sizeCanvases(); render(); renderLayers();
+}
+function transformDoc(kind){
+  snapshot();
+  const swap = (kind === 'cw' || kind === 'ccw');
+  const nw = swap ? doc.h : doc.w, nh = swap ? doc.w : doc.h;
+  layers.forEach(l => {
+    const c = document.createElement('canvas');
+    c.width = nw; c.height = nh;
+    const x = c.getContext('2d');
+    if(kind === 'cw'){ x.translate(nw,0); x.rotate(Math.PI/2); }
+    if(kind === 'ccw'){ x.translate(0,nh); x.rotate(-Math.PI/2); }
+    if(kind === 'fliph'){ x.translate(doc.w,0); x.scale(-1,1); }
+    if(kind === 'flipv'){ x.translate(0,doc.h); x.scale(1,-1); }
+    x.drawImage(l.canvas, 0, 0);
+    l.canvas = c; l.ctx = x;
+  });
+  doc.w = nw; doc.h = nh;
+  sizeCanvases(); render(); renderLayers();
+}
+
+/* ---------------- Filters ---------------- */
+function cssFilterToLayer(filterStr){
+  snapshot();
+  const l = ACTIVE();
+  const c = document.createElement('canvas');
+  c.width = doc.w; c.height = doc.h;
+  const x = c.getContext('2d');
+  x.filter = filterStr;
+  x.drawImage(l.canvas, 0, 0);
+  l.ctx.clearRect(0,0,doc.w,doc.h);
+  l.ctx.drawImage(c, 0, 0);
+  render();
+}
+function pixelate(px){
+  if(px < 2) return;
+  snapshot();
+  const l = ACTIVE();
+  const small = document.createElement('canvas');
+  small.width = Math.max(1, Math.floor(doc.w / px));
+  small.height = Math.max(1, Math.floor(doc.h / px));
+  const sx = small.getContext('2d');
+  sx.imageSmoothingEnabled = true;
+  sx.drawImage(l.canvas, 0, 0, small.width, small.height);
+  l.ctx.imageSmoothingEnabled = false;
+  l.ctx.clearRect(0,0,doc.w,doc.h);
+  l.ctx.drawImage(small, 0, 0, small.width, small.height, 0, 0, doc.w, doc.h);
+  l.ctx.imageSmoothingEnabled = true;
+  render();
+}
+function sharpen(){
+  snapshot();
+  const l = ACTIVE();
+  const src = l.ctx.getImageData(0,0,doc.w,doc.h);
+  const out = l.ctx.createImageData(doc.w, doc.h);
+  const k = [0,-1,0,-1,5,-1,0,-1,0];
+  const s = src.data, o = out.data, W = doc.w, H = doc.h;
+  for(let y=0;y<H;y++) for(let x=0;x<W;x++){
+    for(let ch=0;ch<3;ch++){
+      let sum = 0, ki = 0;
+      for(let dy=-1;dy<=1;dy++) for(let dx=-1;dx<=1;dx++){
+        const xx = Math.min(W-1, Math.max(0, x+dx));
+        const yy = Math.min(H-1, Math.max(0, y+dy));
+        sum += s[(yy*W+xx)*4+ch] * k[ki++];
+      }
+      o[(y*W+x)*4+ch] = Math.min(255, Math.max(0, sum));
+    }
+    o[(y*W+x)*4+3] = s[(y*W+x)*4+3];
+  }
+  l.ctx.putImageData(out, 0, 0);
+  render();
+}
+function noise(amount){
+  snapshot();
+  const l = ACTIVE();
+  const img = l.ctx.getImageData(0,0,doc.w,doc.h);
+  const d = img.data;
+  for(let i=0;i<d.length;i+=4){
+    const n = (Math.random()-0.5) * amount * 2.55;
+    d[i]   = Math.min(255, Math.max(0, d[i]+n));
+    d[i+1] = Math.min(255, Math.max(0, d[i+1]+n));
+    d[i+2] = Math.min(255, Math.max(0, d[i+2]+n));
+  }
+  l.ctx.putImageData(img, 0, 0);
+  render();
+}
+function vignette(strength){
+  snapshot();
+  const l = ACTIVE();
+  const g = l.ctx.createRadialGradient(doc.w/2, doc.h/2, Math.min(doc.w,doc.h)*0.35,
+                                       doc.w/2, doc.h/2, Math.max(doc.w,doc.h)*0.75);
+  g.addColorStop(0, 'rgba(0,0,0,0)');
+  g.addColorStop(1, 'rgba(0,0,0,' + (strength/100) + ')');
+  l.ctx.fillStyle = g;
+  l.ctx.fillRect(0,0,doc.w,doc.h);
+  render();
+}
+
+/* ---------------- Modal ---------------- */
+let modalOkFn = null;
+function openModal(title, bodyHTML, onOk, okLabel){
+  $('modalTitle').textContent = title;
+  $('modalBody').innerHTML = bodyHTML;
+  $('modalOk').textContent = okLabel || 'Apply';
+  modalOkFn = onOk;
+  $('modalBack').classList.add('show');
+}
+$('modalCancel').addEventListener('click', () => $('modalBack').classList.remove('show'));
+$('modalBack').addEventListener('click', e => { if(e.target === $('modalBack')) $('modalBack').classList.remove('show'); });
+$('modalOk').addEventListener('click', () => {
+  $('modalBack').classList.remove('show');
+  if(modalOkFn) modalOkFn();
+});
+function filterModal(title, min, max, def, step, fmt, onVal){
+  openModal(title,
+    `<div class="mrow"><label>Amount</label><input type="range" id="mRange" min="${min}" max="${max}" step="${step}" value="${def}"><span class="mval" id="mVal">${def}</span></div>`,
+    () => onVal(+$('mRange').value));
+  const r = $('mRange');
+  r.addEventListener('input', () => $('mVal').textContent = fmt ? fmt(r.value) : r.value);
+}
+
+/* ---------------- Menus ---------------- */
+document.querySelectorAll('.menu > button').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const m = btn.parentElement;
+    const was = m.classList.contains('open');
+    document.querySelectorAll('.menu').forEach(x => x.classList.remove('open'));
+    if(!was) m.classList.add('open');
+  });
+});
+document.addEventListener('click', () => document.querySelectorAll('.menu').forEach(x => x.classList.remove('open')));
+
+/* ---------------- Start screen ---------------- */
+function showStart(){
+  $('startScreen').classList.remove('hidden');
+  $('blankOpts').classList.add('hidden');
+}
+$('startUpload').addEventListener('click', () => $('fileInput').click());
+$('startBlank').addEventListener('click', () => $('blankOpts').classList.toggle('hidden'));
+$('presetSel').addEventListener('change', e => {
+  const v = e.target.value;
+  if(v !== 'custom'){
+    const [w,h] = v.split(',');
+    $('blankW').value = w; $('blankH').value = h;
+  }
+});
+function createBlank(){
+  const w = Math.max(1, Math.min(8000, +$('blankW').value || 1280));
+  const h = Math.max(1, Math.min(8000, +$('blankH').value || 800));
+  doc.w = w; doc.h = h;
+  layers = []; layerSeq = 1; active = 0;
+  const l = makeLayer('Background');
+  const bg = $('blankBg').value;
+  if(bg === 'white'){ l.ctx.fillStyle = '#ffffff'; l.ctx.fillRect(0,0,w,h); }
+  else if(bg === 'custom'){ l.ctx.fillStyle = $('blankBgColor').value; l.ctx.fillRect(0,0,w,h); }
+  layers.push(l);
+  hist = []; hi = -1; snapshot();
+  sizeCanvases(); render(); renderLayers();
+  $('startScreen').classList.add('hidden');
+  ACTIONS.zoomFit();
+}
+$('createBtn').addEventListener('click', createBlank);
+
+/* ---------------- Actions ---------------- */
+const ACTIONS = {
+  new(){ showStart(); },
+  open(){ $('fileInput').click(); },
+  exportPng(){ exportImage('png'); },
+  exportJpg(){ exportImage('jpeg'); },
+  undo(){ undo(); },
+  redo(){ redo(); },
+  clearLayer(){ snapshot(); ACTIVE().ctx.clearRect(0,0,doc.w,doc.h); render(); },
+  fillLayer(){ snapshot(); ACTIVE().ctx.fillStyle = primary; ACTIVE().ctx.fillRect(0,0,doc.w,doc.h); render(); },
+  rotateCW(){ transformDoc('cw'); },
+  rotateCCW(){ transformDoc('ccw'); },
+  flipH(){ transformDoc('fliph'); },
+  flipV(){ transformDoc('flipv'); },
+  applyCrop(){ applyCrop(); },
+  resizeDoc(){ openModal('Resize document',
+      `<div class="mrow"><label>Scale %</label><input type="number" id="mS" value="100" min="5" max="800"></div>`,
+      () => {
+        const s = +$('mS').value / 100;
+        snapshot();
+        const nw = Math.max(1, Math.round(doc.w*s)), nh = Math.max(1, Math.round(doc.h*s));
+        layers.forEach(l => {
+          const c = document.createElement('canvas');
+          c.width = nw; c.height = nh;
+          const x = c.getContext('2d');
+          x.imageSmoothingQuality = 'high';
+          x.drawImage(l.canvas, 0, 0, nw, nh);
+          l.canvas = c; l.ctx = x;
+        });
+        doc.w = nw; doc.h = nh;
+        sizeCanvases(); render(); renderLayers();
+      }, 'Resize'); },
+  'f-brightness'(){ filterModal('Brightness', 0, 200, 100, 1, v => v + '%', v => cssFilterToLayer('brightness(' + v/100 + ')')); },
+  'f-contrast'(){   filterModal('Contrast', 0, 200, 100, 1, v => v + '%', v => cssFilterToLayer('contrast(' + v/100 + ')')); },
+  'f-saturation'(){ filterModal('Saturation', 0, 200, 100, 1, v => v + '%', v => cssFilterToLayer('saturate(' + v/100 + ')')); },
+  'f-hue'(){        filterModal('Hue rotation', 0, 360, 0, 1, v => v + '°', v => cssFilterToLayer('hue-rotate(' + v + 'deg)')); },
+  'f-blur'(){       filterModal('Gaussian blur', 0, 20, 2, 0.5, v => v + 'px', v => cssFilterToLayer('blur(' + v + 'px)')); },
+  'f-sharpen'(){    sharpen(); },
+  'f-pixelate'(){   filterModal('Pixelate', 2, 60, 8, 1, v => v + 'px', v => pixelate(v)); },
+  'f-noise'(){      filterModal('Add noise', 0, 100, 20, 1, v => v + '%', v => noise(v)); },
+  'f-vignette'(){   filterModal('Vignette', 0, 100, 40, 1, v => v + '%', v => vignette(v)); },
+  'f-grayscale'(){  cssFilterToLayer('grayscale(1)'); },
+  'f-invert'(){     cssFilterToLayer('invert(1)'); },
+  'f-sepia'(){      cssFilterToLayer('sepia(1)'); },
+  zoomIn(){ setZoom(zoom * 1.25); },
+  zoomOut(){ setZoom(zoom * 0.8); },
+  zoomFit(){
+    const pad = 60;
+    setZoom(Math.min((area.clientWidth - pad) / doc.w, (area.clientHeight - pad) / doc.h));
+  },
+  zoom100(){ setZoom(1); },
+  guide(){
+    const rows = Object.entries(TOOLTIPS)
+      .map(([k,v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+    openModal('Tool guide', `<div id="helpBox"><h4>Every tool and what it does</h4><table>${rows}</table>
+      <p style="margin-top:12px;color:var(--dim)">The same instructions also appear in the hint bar under the toolbar whenever you select a tool.</p></div>`, null, 'Close');
+  },
+  help(){
+    openModal('Keyboard shortcuts', `
+      <div id="helpBox"><table>
+        <tr><td>B / E</td><td>Brush / Eraser</td></tr>
+        <tr><td>A / M / U</td><td>Spray / Smudge / Blur brush</td></tr>
+        <tr><td>D / N</td><td>Dodge (lighten) / Burn (darken)</td></tr>
+        <tr><td>F / G / I</td><td>Flood fill / Gradient / Eyedropper</td></tr>
+        <tr><td>T / L / R / O</td><td>Text / Line / Rectangle / Ellipse</td></tr>
+        <tr><td>V / C</td><td>Move layer / Crop (Enter applies)</td></tr>
+        <tr><td>H / Z</td><td>Pan / Zoom tool</td></tr>
+        <tr><td>X</td><td>Swap colors</td></tr>
+        <tr><td>[ / ]</td><td>Brush size down / up</td></tr>
+        <tr><td>Ctrl+Z / Ctrl+Y</td><td>Undo / Redo</td></tr>
+        <tr><td>Ctrl+O / Ctrl+S</td><td>Open image / Export PNG</td></tr>
+        <tr><td>Ctrl+N</td><td>New document screen</td></tr>
+        <tr><td>Space + drag</td><td>Pan canvas</td></tr>
+        <tr><td>Ctrl + wheel</td><td>Zoom</td></tr>
+        <tr><td>0 / 1 / + / -</td><td>Fit / 100% / in / out</td></tr>
+      </table>
+      <p style="margin-top:10px;color:var(--dim)">Shapes stroke with the primary color and fill with the secondary color. Double-click a layer name to rename it. Drag an image file onto the window to open it.</p>
+      </div>`, null, 'Close');
+  }
+};
+document.querySelectorAll('[data-action]').forEach(b =>
+  b.addEventListener('click', () => { const a = ACTIONS[b.dataset.action]; if(a) a(); }));
+
+/* ---------------- File open / export ---------------- */
+function exportImage(type){
+  const a = document.createElement('a');
+  a.download = 'pixelforge-export.' + (type === 'jpeg' ? 'jpg' : 'png');
+  a.href = view.toDataURL('image/' + type, 0.92);
+  a.click();
+}
+$('fileInput').addEventListener('change', e => {
+  const f = e.target.files[0];
+  if(f) openAsDocument(f);
+  e.target.value = '';
+});
+function openAsDocument(file){
+  const img = new Image();
+  img.onload = () => {
+    doc.w = img.naturalWidth; doc.h = img.naturalHeight;
+    layers = []; layerSeq = 1; active = 0;
+    const l = makeLayer(file.name.replace(/\.[^.]+$/, ''));
+    l.ctx.drawImage(img, 0, 0);
+    layers.push(l);
+    hist = []; hi = -1; snapshot();
+    sizeCanvases(); ACTIONS.zoomFit(); render(); renderLayers();
+    $('startScreen').classList.add('hidden');
+    URL.revokeObjectURL(img.src);
+  };
+  img.src = URL.createObjectURL(file);
+}
+let dragCount = 0;
+window.addEventListener('dragenter', e => { e.preventDefault(); dragCount++; $('dropHint').style.display = 'flex'; });
+window.addEventListener('dragleave', e => { e.preventDefault(); if(--dragCount <= 0){ dragCount = 0; $('dropHint').style.display = 'none'; } });
+window.addEventListener('dragover', e => e.preventDefault());
+window.addEventListener('drop', e => {
+  e.preventDefault(); dragCount = 0; $('dropHint').style.display = 'none';
+  const f = e.dataTransfer.files[0];
+  if(f && f.type.startsWith('image/')) openAsDocument(f);
+});
+
+/* ---------------- Keyboard ---------------- */
+window.addEventListener('keydown', e => {
+  if(/input|select|textarea/i.test(document.activeElement.tagName)) return;
+  const k = e.key.toLowerCase();
+  if(e.ctrlKey || e.metaKey){
+    if(k === 'z'){ e.preventDefault(); e.shiftKey ? redo() : undo(); }
+    if(k === 'y'){ e.preventDefault(); redo(); }
+    if(k === 'o'){ e.preventDefault(); ACTIONS.open(); }
+    if(k === 's'){ e.preventDefault(); exportImage('png'); }
+    if(k === 'n'){ e.preventDefault(); ACTIONS.new(); }
+    return;
+  }
+  const map = { b:'brush', e:'eraser', a:'spray', m:'smudge', u:'blur', d:'dodge', n:'burn',
+                f:'fill', g:'gradient', i:'eyedropper', t:'text',
+                l:'line', r:'rect', o:'ellipse', v:'move', c:'crop', h:'pan', z:'zoom' };
+  if(map[k]) setTool(map[k]);
+  else if(k === 'x'){ $('swapColors').click(); }
+  else if(k === '['){ $('brushSize').value = Math.max(1, +$('brushSize').value - 5); $('brushSizeVal').textContent = $('brushSize').value; }
+  else if(k === ']'){ $('brushSize').value = Math.min(200, +$('brushSize').value + 5); $('brushSizeVal').textContent = $('brushSize').value; }
+  else if(k === '0'){ ACTIONS.zoomFit(); }
+  else if(k === '1'){ ACTIONS.zoom100(); }
+  else if(k === '+' || k === '='){ ACTIONS.zoomIn(); }
+  else if(k === '-'){ ACTIONS.zoomOut(); }
+  else if(k === 'enter' && tool === 'crop'){ applyCrop(); }
+});
+
+/* ---------------- Boot ---------------- */
+buildPalette();
+renderRecent();
+addLayer('Background');
+ACTIVE().ctx.fillStyle = '#ffffff';
+ACTIVE().ctx.fillRect(0,0,doc.w,doc.h);
+sizeCanvases();
+snapshot();
+setTool('brush');
+renderLayers();
+showStart();
+</script>
+</body>
+</html>
